@@ -1,0 +1,25 @@
+From f7b3d961be659b2f84bdc9e1095c3e4a270e47ea Mon Sep 17 00:00:00 2001
+From: huanglei <lei.huang@novita.ai>
+Date: Mon, 15 Dec 2025 11:56:25 +0800
+Subject: [PATCH] [feature] clang 14->18
+
+---
+ clickhouse/base/wire_format.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/clickhouse/base/wire_format.h b/clickhouse/base/wire_format.h
+index 9bbf795..7a6088f 100644
+--- a/clickhouse/base/wire_format.h
++++ b/clickhouse/base/wire_format.h
+@@ -1,6 +1,8 @@
+ #pragma once
+ 
+ #include <string>
++#include <cstdint>      // C++ style
++using std::uint64_t;    // using uint64_t
+ 
+ namespace clickhouse {
+ 
+-- 
+2.34.1
+

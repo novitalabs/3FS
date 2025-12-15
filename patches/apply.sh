@@ -21,3 +21,9 @@ if git -C ../third_party/folly apply --reverse --check ../../patches/folly.patch
 else
     git -C ../third_party/folly apply ../../patches/folly.patch
 fi
+
+if git -C ../third_party/clickhouse-cpp apply --reverse --check ../../patches/clickhouse-cpp.patch &>/dev/null; then
+    echo "clickhouse-cpp patch already applied. skipping."
+else
+    git -C ../third_party/clickhouse-cpp apply ../../patches/clickhouse-cpp.patch
+fi
